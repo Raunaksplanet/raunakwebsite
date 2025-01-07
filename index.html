@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechnoWorld 3000</title>
+    <style>
+        body {
+            background-color: neongreen;
+            color: yellow;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px red;
+            animation: spin 5s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .counter {
+            font-size: 1.5rem;
+            margin: 20px;
+        }
+
+        .project-list {
+            margin: 30px auto;
+            text-align: left;
+            max-width: 600px;
+        }
+
+        .project {
+            margin-bottom: 10px;
+            padding: 10px;
+            background: rgba(255, 255, 0, 0.5);
+            border: 2px dashed purple;
+        }
+
+        .contact-form {
+            background: rgba(255, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 80%;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 1rem;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 0.8rem;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌟 Welcome to TechnoWorld 3000 🌟</h1>
+    <div class="counter">You are visitor #1</div>
+
+    <h2>Our Projects</h2>
+    <div class="project-list">
+        <div class="project">🤖 <b>Calculator of Tomorrow™:</b> It adds AND subtracts!</div>
+        <div class="project">🔒 <b>LoginForm 2.0:</b> The most secure login (password: <code>1234</code>).</div>
+        <div class="project">💡 <b>Coming Soon:</b> AI that can read your mind (trust us).</div>
+    </div>
+
+    <h2>Contact Us</h2>
+    <div class="contact-form">
+        <form>
+            <input type="text" placeholder="Your Name">
+            <br>
+            <input type="email" placeholder="Your Email">
+            <br>
+            <textarea placeholder="Your Message"></textarea>
+            <br>
+            <button type="button" onclick="alert('Oops, this form is broken 😢')">Submit</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 TechnoWorld 3000 - The future is here!</p>
+    </div>
+
+    <script>
+        // Autoplay MIDI audio
+        const audio = new Audio("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3");
+        audio.loop = true;
+        audio.play();
+
+        // Random popup every 10 seconds
+        setInterval(() => {
+            alert("YOU WON!");
+        }, 10000);
+    </script>
+</body>
+</html>
