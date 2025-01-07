@@ -4,58 +4,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simple Calculator</title>
-  <style>
+ <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      font-family: Comic Sans MS, cursive, sans-serif; /* Cringe font */
+      background-color: #ff00ff; /* Eye-searing magenta */
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
+      animation: cringe-spin 10s linear infinite; /* Rotating background animation */
     }
+
     .calculator {
-      background: #fff;
+      background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff); /* Rainbow cringe gradient */
       padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      box-shadow: 0 0 50px 10px yellow, 0 0 100px 20px cyan;
       width: 300px;
+      border: 10px dashed #00ffff; /* Dashed cringe border */
     }
+
     .display {
       width: 100%;
       height: 50px;
       margin-bottom: 20px;
-      text-align: right;
+      text-align: center; /* Text now in the center for no reason */
       padding: 10px;
-      font-size: 1.5em;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      font-size: 2em;
+      border: 5px dotted #ff4500; /* Dotted border for more cringe */
+      border-radius: 25px;
+      background-color: #0000ff; /* Electric blue background */
+      color: #ffff00; /* Yellow text */
     }
+
     .buttons {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
+      gap: 15px;
     }
+
     button {
       padding: 15px;
-      font-size: 1.2em;
-      border: none;
-      background-color: #007bff;
-      color: #fff;
-      border-radius: 5px;
+      font-size: 1.5em;
+      border: 3px solid #ff00ff;
+      background-color: #00ff00;
+      color: #ff0000; /* Red text on green background */
+      border-radius: 50%; /* Round buttons */
       cursor: pointer;
-      transition: background 0.3s;
+      transform: rotate(15deg); /* Slight rotation for extra cringe */
+      transition: transform 0.2s, background-color 0.3s;
     }
+
     button:hover {
-      background-color: #0056b3;
+      background-color: #ff69b4; /* Pink when hovered */
+      transform: scale(1.2) rotate(-15deg); /* Weird scaling and opposite rotation */
     }
+
     .button-clear {
-      background-color: #dc3545;
+      background-color: #ff4500; /* Bright orange */
+      color: #0000ff; /* Blue text */
+      animation: blink 1s infinite; /* Blinking clear button */
     }
+
     .button-clear:hover {
-      background-color: #a71d2a;
+      background-color: #8b0000; /* Dark red when hovered */
     }
-  </style>
+
+    /* Animations */
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50%, 100% { opacity: 0.5; }
+    }
+
+    @keyframes cringe-spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+</style>
+
 </head>
 <body>
   <div class="calculator">
