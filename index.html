@@ -6,36 +6,50 @@
   <title>Simple Calculator</title>
  <style>
     body {
-      font-family: Comic Sans MS, cursive, sans-serif; /* Cringe font */
-      background-color: #ff00ff; /* Eye-searing magenta */
+      font-family: Papyrus, Comic Sans MS, cursive, sans-serif; /* Double cringe fonts */
+      background: repeating-linear-gradient(
+        45deg,
+        #ff0000,
+        #ff0000 10px,
+        #00ff00 10px,
+        #00ff00 20px,
+        #0000ff 20px,
+        #0000ff 30px
+      ); /* Flashy striped cringe */
+      color: #ff00ff; /* Unreadable magenta text */
+      text-shadow: 5px 5px 10px cyan, -5px -5px 10px yellow; /* Extreme text shadow */
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
-      animation: cringe-spin 10s linear infinite; /* Rotating background animation */
+      animation: cringe-spin 5s linear infinite, cringe-fade 3s alternate infinite; /* Spinning and fading simultaneously */
     }
 
     .calculator {
-      background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff); /* Rainbow cringe gradient */
-      padding: 20px;
+      background: radial-gradient(circle, #ff69b4, #0000ff, #ff0000); /* Vomit-inducing gradient */
+      padding: 30px;
       border-radius: 50%;
-      box-shadow: 0 0 50px 10px yellow, 0 0 100px 20px cyan;
-      width: 300px;
-      border: 10px dashed #00ffff; /* Dashed cringe border */
+      border: 20px double #ffff00; /* Double border for extra clutter */
+      box-shadow: 0 0 50px 10px green, 0 0 100px 20px purple, inset 0 0 20px #ffffff; /* Too many shadows */
+      animation: cringe-pulse 2s infinite alternate; /* Pulsing for no reason */
     }
 
     .display {
       width: 100%;
       height: 50px;
       margin-bottom: 20px;
-      text-align: center; /* Text now in the center for no reason */
+      text-align: center;
       padding: 10px;
-      font-size: 2em;
-      border: 5px dotted #ff4500; /* Dotted border for more cringe */
-      border-radius: 25px;
-      background-color: #0000ff; /* Electric blue background */
-      color: #ffff00; /* Yellow text */
+      font-size: 2.5em;
+      font-weight: bold;
+      background: conic-gradient(#ff4500, #00ff00, #0000ff, #ff69b4); /* Spinning gradient */
+      border: 10px groove #ff00ff; /* Groove border adds extra noise */
+      border-radius: 50px;
+      color: #00ffff; /* Cyan text */
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      animation: rainbow-text 3s infinite; /* Blinking rainbow effect */
     }
 
     .buttons {
@@ -45,43 +59,69 @@
     }
 
     button {
-      padding: 15px;
-      font-size: 1.5em;
-      border: 3px solid #ff00ff;
-      background-color: #00ff00;
-      color: #ff0000; /* Red text on green background */
-      border-radius: 50%; /* Round buttons */
-      cursor: pointer;
-      transform: rotate(15deg); /* Slight rotation for extra cringe */
-      transition: transform 0.2s, background-color 0.3s;
+      padding: 20px;
+      font-size: 2em;
+      border: 5px ridge #00ffff;
+      background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ffff00);
+      color: #000000; /* Black text */
+      text-shadow: 2px 2px #ffffff, -2px -2px #0000ff;
+      border-radius: 100%; /* Full circles */
+      transform: rotate(30deg) scale(1.1); /* Weird rotation and scaling */
+      transition: all 0.2s ease-in-out;
+      cursor: crosshair; /* Why not a crosshair cursor? */
     }
 
     button:hover {
-      background-color: #ff69b4; /* Pink when hovered */
-      transform: scale(1.2) rotate(-15deg); /* Weird scaling and opposite rotation */
+      transform: scale(1.5) rotate(-30deg); /* Hover makes buttons bigger and rotated */
+      background: repeating-radial-gradient(circle, #ff00ff, #ff69b4, #ffff00, #00ff00);
+      box-shadow: 0 0 30px 15px #ff0000, inset 0 0 10px #00ffff;
+      color: #ff4500;
     }
 
     .button-clear {
-      background-color: #ff4500; /* Bright orange */
-      color: #0000ff; /* Blue text */
-      animation: blink 1s infinite; /* Blinking clear button */
+      background-color: #ff69b4;
+      color: #00ff00;
+      font-weight: 900;
+      animation: cringe-shake 0.5s infinite; /* Shaking for no reason */
     }
 
     .button-clear:hover {
-      background-color: #8b0000; /* Dark red when hovered */
+      background-color: #ff0000;
+      text-decoration: blink; /* Deprecated cringe styling */
     }
 
     /* Animations */
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      50%, 100% { opacity: 0.5; }
-    }
-
     @keyframes cringe-spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+
+    @keyframes cringe-pulse {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.2); }
+    }
+
+    @keyframes cringe-fade {
+      0% { opacity: 1; }
+      100% { opacity: 0.3; }
+    }
+
+    @keyframes cringe-shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      50% { transform: translateX(5px); }
+      75% { transform: translateX(-5px); }
+    }
+
+    @keyframes rainbow-text {
+      0% { color: red; }
+      25% { color: orange; }
+      50% { color: yellow; }
+      75% { color: green; }
+      100% { color: blue; }
+    }
 </style>
+
 
 </head>
 <body>
