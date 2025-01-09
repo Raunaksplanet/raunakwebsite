@@ -1,171 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Calculator</title>
- <style>
-    body {
-      font-family: Papyrus, Comic Sans MS, cursive, sans-serif; /* Double cringe fonts */
-      background: repeating-linear-gradient(
-        45deg,
-        #ff0000,
-        #ff0000 10px,
-        #00ff00 10px,
-        #00ff00 20px,
-        #0000ff 20px,
-        #0000ff 30px
-      ); /* Flashy striped cringe */
-      color: #ff00ff; /* Unreadable magenta text */
-      text-shadow: 5px 5px 10px cyan, -5px -5px 10px yellow; /* Extreme text shadow */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      animation: cringe-spin 5s linear infinite, cringe-fade 3s alternate infinite; /* Spinning and fading simultaneously */
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readable Heavy Tech Blog</title>
+    <style>
+        /* Body with super-fast gradient animations */
+        body {
+            background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb, #8fd3f4);
+            background-size: 400% 400%;
+            font-family: Arial, sans-serif;
+            color: #333;
+            animation: backgroundAnimation 1s infinite;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
 
-    .calculator {
-      background: radial-gradient(circle, #ff69b4, #0000ff, #ff0000); /* Vomit-inducing gradient */
-      padding: 30px;
-      border-radius: 50%;
-      border: 20px double #ffff00; /* Double border for extra clutter */
-      box-shadow: 0 0 50px 10px green, 0 0 100px 20px purple, inset 0 0 20px #ffffff; /* Too many shadows */
-      animation: cringe-pulse 2s infinite alternate; /* Pulsing for no reason */
-    }
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0% 96%;
+            }
 
-    .display {
-      width: 100%;
-      height: 50px;
-      margin-bottom: 20px;
-      text-align: center;
-      padding: 10px;
-      font-size: 2.5em;
-      font-weight: bold;
-      background: conic-gradient(#ff4500, #00ff00, #0000ff, #ff69b4); /* Spinning gradient */
-      border: 10px groove #ff00ff; /* Groove border adds extra noise */
-      border-radius: 50px;
-      color: #00ffff; /* Cyan text */
-      text-transform: uppercase;
-      letter-spacing: 5px;
-      animation: rainbow-text 3s infinite; /* Blinking rainbow effect */
-    }
+            50% {
+                background-position: 98% 99%;
+            }
 
-    .buttons {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
-    }
+            100% {
+                background-position: 99% 100%;
+            }
+        }
 
-    button {
-      padding: 20px;
-      font-size: 2em;
-      border: 5px ridge #00ffff;
-      background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ffff00);
-      color: #000000; /* Black text */
-      text-shadow: 2px 2px #ffffff, -2px -2px #0000ff;
-      border-radius: 100%; /* Full circles */
-      transform: rotate(30deg) scale(1.1); /* Weird rotation and scaling */
-      transition: all 0.2s ease-in-out;
-      cursor: crosshair; /* Why not a crosshair cursor? */
-    }
+        /* Header styles with fast animations */
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+            animation: fadeIn 0.5s ease-in-out infinite alternate;
+        }
 
-    button:hover {
-      transform: scale(1.5) rotate(-30deg); /* Hover makes buttons bigger and rotated */
-      background: repeating-radial-gradient(circle, #ff00ff, #ff69b4, #ffff00, #00ff00);
-      box-shadow: 0 0 30px 15px #ff0000, inset 0 0 10px #00ffff;
-      color: #ff4500;
-    }
+        h2 {
+            font-size: 2em;
+            color: #444;
+            margin: 20px;
+            animation: slideIn 0.7s ease-out infinite alternate;
+        }
 
-    .button-clear {
-      background-color: #ff69b4;
-      color: #00ff00;
-      font-weight: 900;
-      animation: cringe-shake 0.5s infinite; /* Shaking for no reason */
-    }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
 
-    .button-clear:hover {
-      background-color: #ff0000;
-      text-decoration: blink; /* Deprecated cringe styling */
-    }
+            to {
+                opacity: 1;
+            }
+        }
 
-    /* Animations */
-    @keyframes cringe-spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
 
-    @keyframes cringe-pulse {
-      0% { transform: scale(1); }
-      100% { transform: scale(1.2); }
-    }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
 
-    @keyframes cringe-fade {
-      0% { opacity: 1; }
-      100% { opacity: 0.3; }
-    }
+        /* Paragraphs with rapid animations */
+        p {
+            font-size: 1.2em;
+            background: #ffffffdd;
+            padding: 15px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            animation: floatEffect 0.8s infinite alternate;
+        }
 
-    @keyframes cringe-shake {
-      0%, 100% { transform: translateX(0); }
-      25% { transform: translateX(-5px); }
-      50% { transform: translateX(5px); }
-      75% { transform: translateX(-5px); }
-    }
+        @keyframes floatEffect {
+            from {
+                transform: translateY(0);
+            }
 
-    @keyframes rainbow-text {
-      0% { color: red; }
-      25% { color: orange; }
-      50% { color: yellow; }
-      75% { color: green; }
-      100% { color: blue; }
-    }
-</style>
+            to {
+                transform: translateY(-10px);
+            }
+        }
 
+        /* Links with super-fast glowing hover effects */
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+            animation: pulseEffect 0.7s infinite;
+        }
 
+        a:hover {
+            color: #ff6600;
+            text-shadow: 0 0 10px #ff6600;
+        }
+
+        @keyframes pulseEffect {
+            0% {
+                text-shadow: 0 0 5px #00aaff;
+            }
+
+            50% {
+                text-shadow: 0 0 15px #00aaff;
+            }
+
+            100% {
+                text-shadow: 0 0 5px #00aaff;
+            }
+        }
+
+        /* Navbar with fast slide animations */
+        .navbar {
+            background: #222;
+            color: #fff;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            animation: navbarSlide 0.8s ease-in-out infinite alternate;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            animation: colorShift 0.6s infinite;
+        }
+
+        .navbar a:hover {
+            background: #444;
+            transition: background 0.3s;
+        }
+
+        @keyframes navbarSlide {
+            from {
+                transform: translateY(-100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes colorShift {
+            0% {
+                color: #ff66cc;
+            }
+
+            50% {
+                color: #33ccff;
+            }
+
+            100% {
+                color: #ff66cc;
+            }
+        }
+
+        /* Footer with rapid glow animation */
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            animation: glowEffect 0.5s infinite;
+        }
+
+        @keyframes glowEffect {
+            0% {
+                box-shadow: 0 0 5px #ff6600;
+            }
+
+            50% {
+                box-shadow: 0 0 20px #ff6600;
+            }
+
+            100% {
+                box-shadow: 0 0 5px #ff6600;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <div class="calculator">
-    <input type="text" id="display" class="display" disabled />
-    <div class="buttons">
-      <button onclick="appendValue('7')">7</button>
-      <button onclick="appendValue('8')">8</button>
-      <button onclick="appendValue('9')">9</button>
-      <button onclick="appendValue('/')">/</button>
-      <button onclick="appendValue('4')">4</button>
-      <button onclick="appendValue('5')">5</button>
-      <button onclick="appendValue('6')">6</button>
-      <button onclick="appendValue('*')">*</button>
-      <button onclick="appendValue('1')">1</button>
-      <button onclick="appendValue('2')">2</button>
-      <button onclick="appendValue('3')">3</button>
-      <button onclick="appendValue('-')">-</button>
-      <button onclick="appendValue('0')">0</button>
-      <button onclick="appendValue('.')">.</button>
-      <button onclick="calculate()">=</button>
-      <button onclick="appendValue('+')">+</button>
-      <button class="button-clear" onclick="clearDisplay()">C</button>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#blogs">Blogs</a>
+        <a href="#contact">Contact</a>
     </div>
-  </div>
-
-  <script>
-    const display = document.getElementById('display');
-
-    function appendValue(value) {
-      display.value += value;
-    }
-
-    function clearDisplay() {
-      display.value = '';
-    }
-
-    function calculate() {
-      try {
-        display.value = eval(display.value);
-      } catch {
-        display.value = 'Error';
-      }
-    }
-  </script>
+    <h1>Readable Heavy Tech Blog</h1>
+    <h2 id="blogs">Latest Blogs</h2>
+    <p>
+        Have you ever wondered how modern frameworks are evolving so fast? In this blog, we explore the latest
+        advancements in web technologies
+        and the trends shaping the future of the internet. <a href="#">Read more</a>.
+    </p>
+    <p>
+        If you’re curious about AI and machine learning, this is the place to be. From the basics of neural networks to
+        cutting-edge applications,
+        we dive deep into how technology is changing the world. <a href="#">Explore now</a>.
+    </p>
+    <h2 id="about">About Us</h2>
+    <p>
+        We are passionate about sharing knowledge on all things tech. Our blog covers topics ranging from programming
+        and cybersecurity
+        to the latest gadgets. Stay tuned for insightful articles every week!
+    </p>
+    <footer>
+        © 2025 CringeTech | Built for tech enthusiasts with heavy animations!
+    </footer>
 </body>
+
 </html>
